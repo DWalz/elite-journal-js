@@ -1,0 +1,25 @@
+{
+  "name": "elite-journal",
+  "version": "1.0.0",
+  "description": "Journal API for Elite Dangerous",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/es/index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "es-module": "tsc -p tsconfig.json",
+    "cjs-module": "tsc -p tsconfig-cjs.json",
+    "module": "npm run es-module && npm run cjs-module",
+    "prepublishOnly": "npm run module"
+  },
+  "author": "DWalz",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.42",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3"
+  }
+}
